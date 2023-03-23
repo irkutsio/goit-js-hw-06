@@ -1,19 +1,12 @@
-// const title = document.querySelectorAll(".title");
-// // const h2 = item.querySelector("h2");
-// console.dir(title.length);
-// undefined;
+const categoriesList = document.querySelector("#categories");
+const liItem = document.querySelectorAll(".item");
 
-// const title = document.querySelector(".title");
-// // const h2 = item.querySelector("h2");
-// title.classList.add("js-title");
-// // title.classList.remove("js-title");
-// title.classList.replace("title", "js-new_title");
-// console.log(title);
+//1
+console.log(`Number of categories : ${liItem.length}`);
 
-// const ul = document.querySelector("ul");
-// console.log(ul);
-
-const newElement = document.createElement("h1");
-console.log(newElement);
-newElement.textContent = "Єто новый элемент";
-document.body.prepend(newElement);
+//2
+liItem.forEach((item) => {
+  console.log(
+    `Category : ${item.firstElementChild.textContent} \nElements : ${item.lastElementChild.children.length}`
+  );
+});
