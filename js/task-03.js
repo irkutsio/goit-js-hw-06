@@ -21,5 +21,6 @@ const galleryList = images
       `<li><img src="${url}" alt="${alt}" class="img-task-3" /></li>`
   )
   .join("");
-console.dir(galleryList);
+  
+// console.dir(galleryList);
 gallery.insertAdjacentHTML("afterbegin", galleryList);
