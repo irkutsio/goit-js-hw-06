@@ -9,14 +9,14 @@ function onSubmit(event) {
   event.preventDefault();
   const { email, password } = event.currentTarget.elements;
   //3
-  if (email.value === "" || password.value === "") {
+  if (email.value === "" || password.value.trim() === "") {
     alert("Please, fill in all the inputs");
   }
   //4
   else {
     const userArray = {
-      userEmail: email.value,
-      userPassword: password.value,
+      email: email.value,
+      password: password.value,
     };
     console.log(userArray);
   }
