@@ -13,15 +13,18 @@ function onCreateBtn() {
   const amount = Number(document.querySelector("input").value);
   const boxes = document.querySelector("#boxes");
   let size = 30;
+  const newArr = [...boxes.children];
+  console.log(newArr);
 
-  for (let i = 0; i < amount; i += 1) {
+  newArr.forEach((item) => {
     const box = document.createElement("div");
     box.style.width = size + "px";
     box.style.height = size + "px";
     box.style.backgroundColor = getRandomHexColor();
     size += 10;
-    boxes.appendChild(box);
-  }
+    newArr.push(item);
+    boxes.append(...newArr);
+  });
 }
 
 // function onCreateBtn() {
